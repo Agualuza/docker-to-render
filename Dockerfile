@@ -11,6 +11,6 @@ COPY --from=builder /app/build/libs/*.jar /app/app.jar
 
 WORKDIR /app
 
-EXPOSE 8080
+EXPOSE $PORT
 
 CMD ["java", "-jar", "app.jar"]
